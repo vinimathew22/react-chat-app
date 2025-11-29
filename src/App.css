@@ -1,38 +1,91 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f0f;
+  color: #e6e6e6;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --blue: #1e8bff;
+  --blue-light: #4dabff;
+  --glass: rgba(255,255,255,0.06);
+}
+
+.auth {
+  max-width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0, 119, 255, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.auth p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--blue-light);
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.room {
+  max-width: 350px;
+  margin: 80px auto 40px auto;
+  padding: 20px;
+  background: var(--glass);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 119, 255, 0.15);
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  color: var(--blue-light);
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.room-input {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  outline: none;
+  background: #0d0d0d;
+  color: #e6e6e6;
+  font-size: 16px;
+}
+
+
+.glass-btn {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(30, 139, 255, 0.15);
+  color: var(--blue-light);
+  font-weight: 600;
+  transition: 0.25s;
+  border: 1px solid rgba(30, 139, 255, 0.3);
+}
+
+.glass-btn:hover {
+  background: rgba(30, 139, 255, 0.3);
+  color: #fff;
+}
+
+
+.sign-out {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 35px;
+}
+
+.sign-out button {
+  width: 200px;
 }
